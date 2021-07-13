@@ -6,6 +6,7 @@
 /* CSS custom property or variables */
 :root{
   --button-bg: #E02C6D;
+  --text-color: #6C6C6C;
 }
 
 
@@ -157,3 +158,41 @@ img{
 }
 
 /* ! hero seciton design */
+
+
+/* players section design */
+#players{
+  padding: 40px 0;
+}
+#players .players-wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+}
+#players .single-player{
+  box-shadow: #11111a0d 0px 4px 16px, #11111a0d 0px 8px 32px;
+  padding: 10px;
+}
+#players .single-player .player-img{
+  overflow: hidden;
+}
+#players .single-player .player-img img{
+  transition: transform 700ms;
+}
+#players .single-player:hover .player-img img{
+  transform: scale(1.4) rotate(2deg);
+}
+#players .single-player .player-info{
+  padding: 15px 0;
+}
+#players .single-player .player-info .player-name{
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+#players .single-player .player-info .player-desc{
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--text-color);
+}
+/* ! players section design */
