@@ -1,6 +1,14 @@
 /* @Import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+
+
+/* CSS custom property or variables */
+:root{
+  --button-bg: #E02C6D;
+}
+
+
 /* reset default margin padding settings */
 *{
   margin: 0;
@@ -8,3 +16,66 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+
+
+/* common styles */
+header, section{
+  display: flex;
+  justify-content: center;
+}
+.container{
+  width: 80%;
+}
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+}
+/* ! common styles */
+
+
+
+/* header area design */
+.header{
+  background: #2D25A0;
+  padding: 15px 0;
+}
+.header .navigation-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .menu{
+  display: flex;
+  align-items: center;
+}
+.header .menu li{
+  list-style-type: none;
+}
+.header .menu li a{
+  color: #fff;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: color 400ms;
+}
+.header .menu li a:hover{
+  color: var(--button-bg);
+}
+.header .login a{
+  display: inline-block;
+  padding: 10px 30px;
+  background: var(--button-bg);
+  color: #fff;
+  border: 1px solid transparent;
+  transition: all 400ms;
+}
+.header .login a .fas{
+  margin-right: 6px;
+}
+.header .login a:hover{
+  background: transparent;
+  border-color: var(--button-bg);
+}
+/* ! header area design */
