@@ -33,6 +33,24 @@ a{
 img{
   max-width: 100%;
 }
+.styled-button{
+  display: inline-block;
+  padding: 10px 30px;
+  background: var(--button-bg);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 400ms;
+  padding-right: 40px;
+}
+.styled-button .fas{
+  position: relative;
+  left: 5px;
+  transition: all 400ms;
+}
+.styled-button:hover .fas{
+  left: 15px;
+}
 /* ! common styles */
 
 
@@ -40,7 +58,7 @@ img{
 /* header area design */
 .header{
   background: #2D25A0;
-  padding: 15px 0;
+  padding: 20px 0;
 }
 .header .navigation-menu{
   display: flex;
@@ -58,6 +76,7 @@ img{
   color: #fff;
   padding: 10px 15px;
   display: inline-block;
+  font-weight: 500;
   transition: color 400ms;
 }
 .header .menu li a:hover{
@@ -79,3 +98,62 @@ img{
   border-color: var(--button-bg);
 }
 /* ! header area design */
+
+
+
+/* hero seciton design */
+#hero{
+  padding-bottom: 40px;
+  background: #2D25A0;
+}
+#hero .hero-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  align-items: center;
+}
+#hero .hero-details h2{
+  font-size: 64px;
+  font-weight: bold;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+#hero .hero-image{
+  position: relative;
+}
+#hero .hero-image img{
+  position: relative;
+}
+#hero .hero-image img:first-child{
+  left: 0;
+  top: 100px;
+  height: 120px;
+  animation: football 1.5s linear infinite running alternate;
+}
+#hero .hero-image img:last-child{
+  right: 0;
+  bottom: 0;
+  animation: player 1.5s linear infinite running alternate;
+}
+@keyframes football {
+  from{
+    top:100px;
+    left: 0;
+  }
+  to{
+    top:150px;
+    left: 30px;
+  }
+}
+@keyframes player {
+  from{
+    bottom: 0;
+    right: 0;
+  }
+  to{
+    bottom: 33px;
+    right: 28px;
+  }
+}
+
+/* ! hero seciton design */
