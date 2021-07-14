@@ -210,9 +210,13 @@ img{
   padding: 40px 0;
   background: url(../images/news/news-bg.jpg);
 }
-#latest-news .latest-news-title{
+.latest-news-title{
   font-size: 45px;
   color: #111;
+}
+.latest-news-title i,
+.latest-news-title span{
+  color: var(--button-bg);
 }
 #latest-news .news-wrapper{
   margin-top: 40px;
@@ -220,10 +224,7 @@ img{
   grid-template-columns: 1fr 300px;
   grid-gap: 25px;
 }
-#latest-news .latest-news-title i,
-#latest-news .latest-news-title span{
-  color: var(--button-bg);
-}
+
 #latest-news .news-1,
 #latest-news .news-3{
   display: flex;
@@ -318,6 +319,76 @@ img{
 /*  ! EXTRA SECTION Latest News sention design */
 
 
+/*  EXTRA SECTION Latest Blogs sention design */
+#blogs{
+  padding: 40px 0;
+}
+#blogs .blog-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  padding-top: 40px;
+}
+#blogs .blog-img{
+  position: relative;
+  overflow: hidden;
+}
+#blogs .blog-img .overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 20px;
+  background: #222;
+  width: 100%;
+}
+#blogs .blog-img .overlay span{
+  font-size: 16px;
+  color: #fff;
+  margin-right: 15px;
+}
+#blogs .blog-img img{
+  width: 100%;
+  transition: transform 400ms;
+}
+#blogs .blog-img:hover img{
+  transform: scale(1.4);
+}
+.blog-content{
+  padding: 15px 0;
+}
+.blog-content .blog-title{
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+.blog-content .blog-desc{
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.blog-content .blog-button{
+  display: inline-block;
+  padding: 10px 30px;
+  background: #222;
+  color: #fff;
+  padding-right: 40px;
+  border: 2px solid transparent;
+  transition: all 400ms;
+}
+.blog-content .blog-button i.fas{
+  transition: transform 400ms;
+  transform: translateX(5px);
+}
+.blog-content .blog-button:hover{
+  background: transparent;
+  color: #000;
+  border-color: #000;
+}
+.blog-content .blog-button:hover i.fas{
+  transform: translateX(20px);
+}
+/*  ! EXTRA SECTION Latest Blogs sention design */
+
+
 
 
 /* footer seciton design */
@@ -401,6 +472,9 @@ footer p.copy-right{
     font-size: 45px;
     margin-bottom: 20px;
   }
+  #hero .hero-image img:first-child{
+    height: 80px;
+  }
 
   /* players section */
   #players .players-wrapper{
@@ -424,6 +498,11 @@ footer p.copy-right{
     width: 100%;
   }
 
+  /* latest blogs */
+  #blogs .blog-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
 }
 
 /*----------------------------------------- 
@@ -431,8 +510,8 @@ Tablet responsive area
 ------------------------------------------*/
 @media only screen and (min-width:577px) and (max-width: 768px) {
   .container{
-    width: 100%;
-    /* padding: 0 10px; */
+    width: 95%;
+    padding: 0 10px;
   }
 
 
@@ -498,4 +577,10 @@ Tablet responsive area
     width: 400px;
   }
 
+    /* latest blogs */
+    #blogs .blog-wrapper{
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    
 }
