@@ -311,3 +311,117 @@ img{
   color: #666;
 }
 /*  ! EXTRA SECTION Latest Result sention design */
+
+
+
+/*  EXTRA SECTION Latest News sention design */
+#latest-news{
+  padding: 40px 0;
+  background: url(../images/news/news-bg.jpg);
+}
+#latest-news .latest-news-title{
+  font-size: 45px;
+  color: #111;
+}
+#latest-news .news-wrapper{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-gap: 25px;
+}
+#latest-news .latest-news-title i,
+#latest-news .latest-news-title span{
+  color: var(--button-bg);
+}
+#latest-news .news-1,
+#latest-news .news-3{
+  display: flex;
+}
+/* #latest-news .news-img{
+  overflow: hidden;
+} */
+#latest-news .news-1 .news-img img,
+#latest-news .news-3 .news-img img{
+  height: 100%;
+  width: 550px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#latest-news .side-news .news-img img{
+  width: 100%;
+}
+#latest-news .single-news{
+  background: #fff;
+  border-radius: 5px;
+}
+#latest-news .single-news .news-contents{
+  padding: 15px 20px;
+}
+#latest-news .single-news .news-img{
+  position: relative;
+}
+#latest-news .single-news .single-news-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#latest-news .single-news .single-news-header .news-reporter{
+  display: flex;
+  align-items: center;
+}
+#latest-news .single-news .single-news-header img{
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#latest-news .single-news .single-news-header h5{
+  font-size: 16px;
+  color: var(--button-bg);
+  font-style: italic;
+  font-weight: normal;
+}
+#latest-news .single-news .single-news-header i{
+  margin: 0 5px;
+}
+#latest-news .single-news i{
+  color: var(--button-bg);
+}
+#latest-news .single-news .news-title a{
+  color: #111;
+  font-weight: 500;
+  font-size: 22px;
+  transition: color 400ms;
+}
+
+#latest-news .single-news .news-info{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+#latest-news .single-news .news-info i{
+  margin-right:6px;
+}
+#latest-news .single-news .single-news-header span,
+#latest-news .single-news .news-info span,
+#latest-news .single-news .news-info p{
+  font-size: 14px;
+  color: #111;
+  font-weight: 500;
+}
+#latest-news .single-news .news-desc{
+  font-size: 15px;
+  color: #111;
+  margin-bottom: 10px;
+}
+#latest-news .single-news .styled-button{
+  font-size: 14px;
+  filter: grayscale(100);
+}
+#latest-news .single-news:hover .news-title a{
+  color: var(--button-bg);
+}
+#latest-news .single-news:hover .styled-button{
+  filter: grayscale(0);
+
+}
+/*  ! EXTRA SECTION Latest News sention design */
