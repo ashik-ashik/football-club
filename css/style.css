@@ -189,7 +189,7 @@ img{
   transform: scale(1.4) rotate(2deg);
 }
 #players .single-player .player-info{
-  padding: 15px 0;
+  padding: 15px 0 20px;
 }
 #players .single-player .player-info .player-name{
   margin-bottom: 10px;
