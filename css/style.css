@@ -468,3 +468,93 @@ footer p.copy-right{
   margin-top: 20px;
 }
 /* ! footer seciton design */
+
+
+
+
+/* ===========================================
+    Responsive zoon
+==============================================*/
+
+@media (max-width: 576px) { 
+  .container{
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* header responsive */
+
+  .header .menu{
+    display: none;
+  }
+
+  /* hero section */
+  #hero .hero-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+    padding: 70px 0 50px;
+  }
+  #hero .hero-details h2{
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+
+  /* players section */
+  #players .players-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* results section */
+  #results::after{
+    display: none;
+  }
+  #results .result-wrapper{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #results .result-wrapper .winner{
+    align-self: flex-end;
+  }
+  #results .result-wrapper .looser{
+    align-self: flex-start;
+  }
+  #results .result-wrapper .score{
+    align-self: center;
+    padding: 50px 0;
+  }
+  #results .result-wrapper .score h2{
+    font-size: 45px;
+    font-weight: 600;
+  }
+  #results .result-wrapper .score .vs{
+    position: static;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  #results .result-wrapper .winner .winner-info,
+  #results .result-wrapper .looser .winner-info{
+    width: 350px;
+  }
+  #results .result-wrapper .winner .winner-info::after,
+  #results .result-wrapper .looser .winner-info::after{
+    width: 140px;
+    background: #111;
+    top: 0;
+    z-index: -1;
+  }
+
+  /* Latest News sention */
+  #latest-news .news-wrapper{
+    grid-template-columns: 1fr;
+  }
+  #latest-news .news-1,
+  #latest-news .news-3{
+    flex-direction: column;
+  }
+  #latest-news .news-1 .news-img img,
+  #latest-news .news-3 .news-img img{
+    border-radius: 0;
+    width: 100%;
+  }
+
+}
