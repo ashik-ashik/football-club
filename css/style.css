@@ -376,7 +376,7 @@ footer p.copy-right{
 --------------------------------------- */
 @media (max-width: 576px) { 
   .container{
-    width: 90%;
+    width: 95%;
     padding: 0 10px;
   }
 
@@ -405,14 +405,14 @@ footer p.copy-right{
   /* players section */
   #players .players-wrapper{
     grid-template-columns: repeat(1, 1fr);
-    width: 80%;
+    width: 100%;
   }
 
 
   /* Latest News sention */
   #latest-news .news-wrapper{
     grid-template-columns: 1fr;
-    width: 80%;
+    width: 100%;
   }
   #latest-news .news-1,
   #latest-news .news-3{
