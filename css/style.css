@@ -60,6 +60,9 @@ img{
   background: #2D25A0;
   padding: 20px 0;
 }
+.header #toggle{
+  display: none;
+}
 .header .navigation-menu{
   display: flex;
   justify-content: space-between;
@@ -199,118 +202,6 @@ img{
   color: var(--text-color);
 }
 /* ! players section design */
-
-
-
-/*  EXTRA SECTION Latest Result sention design */
-#results{
-  padding: 40px 0;
-  position: relative;
-}
-#results::after{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 42%;
-  width: 100%;
-  background: #ff8bcb6c;
-  z-index: -1;
-}
-.section-title{
-  text-align: center;
-}
-.section-title h2{
-  font-size: 45px;
-  color: #222222;
-  margin-bottom: 15px;
-}
-.section-title h2 span{
-  color: var(--button-bg);
-}
-#results .result-wrapper{
-  display: flex;
-  align-items: center;
-  margin-top: 25px;
-}
-#results .result-wrapper .winner,
-#results .result-wrapper .looser{
-  flex-grow: 1;
-  position: relative;
-}
-#results .result-wrapper .winner{
-  text-align: end;
-}
-#results .result-wrapper img{
-  z-index: 2;
-  position: relative;
-}
-#results .result-wrapper .winner .winner-info,
-#results .result-wrapper .looser .winner-info{
-  position: absolute;
-  width: 250px;
-  padding: 25px;
-  background: #111;
-  bottom: 7px;
-  z-index: 0;
-}
-#results .result-wrapper .winner .winner-info{
-  right: 100px;
-  text-align: start;
-}
-#results .result-wrapper .looser .winner-info{
-  left: 100px;
-  text-align: end;
-}
-#results .result-wrapper .winner-info h4{
-  font-size: 20px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-#results .result-wrapper .winner-info p{
-  font-size: 17px;
-  color: var(--button-bg);
-  font-weight: 500;
-  margin: 5px 0;
-  letter-spacing: 2px;
-}
-#results .result-wrapper .looser .winner-info p{
-  color: #e60909;
-}
-#results .result-wrapper .winner .winner-info::after,
-#results .result-wrapper .looser .winner-info::after{
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 140px;
-  background: #111;
-  top: 0;
-  z-index: -1;
-}
-#results .result-wrapper .winner .winner-info::after{
-  left: -46px;
-  transform: skew(-30deg);
-}
-#results .result-wrapper .looser .winner-info::after{
-  right: -46px;
-  transform: skew(30deg);
-}
-#results .result-wrapper .score{
-  color: #111;
-  padding: 0 20px;
-  text-align: center;
-}
-#results .result-wrapper .score h2{
-  font-size: 50px;
-  font-weight: 900;
-}
-#results .result-wrapper .score .vs{
-  position: relative;
-  bottom: 50px;
-  color: #666;
-}
-/*  ! EXTRA SECTION Latest Result sention design */
 
 
 
@@ -476,9 +367,16 @@ footer p.copy-right{
     Responsive zoon
 ==============================================*/
 
+
+
+
+
+/* ---------------------------------------
+  Mobile responsive area
+--------------------------------------- */
 @media (max-width: 576px) { 
   .container{
-    width: 100%;
+    width: 90%;
     padding: 0 10px;
   }
 
@@ -487,7 +385,67 @@ footer p.copy-right{
   .header .menu{
     display: none;
   }
+  .header #toggle{
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+  }
 
+  /* hero section */
+  #hero .hero-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+    padding: 70px 0 50px;
+    width: 100%;
+  }
+  #hero .hero-details h2{
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+
+  /* players section */
+  #players .players-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+
+
+  /* Latest News sention */
+  #latest-news .news-wrapper{
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+  #latest-news .news-1,
+  #latest-news .news-3{
+    flex-direction: column;
+  }
+  #latest-news .news-1 .news-img img,
+  #latest-news .news-3 .news-img img{
+    border-radius: 0;
+    width: 100%;
+  }
+
+}
+
+/*----------------------------------------- 
+Tablet responsive area
+------------------------------------------*/
+@media only screen and (min-width:577px) and (max-width: 768px) {
+  .container{
+    width: 100%;
+    /* padding: 0 10px; */
+  }
+
+
+  /* header responsive */
+
+  .header .menu{
+    display: none;
+  }
+  .header #toggle{
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+  }
   /* hero section */
   #hero .hero-wrapper{
     grid-template-columns: repeat(1, 1fr);
@@ -498,50 +456,33 @@ footer p.copy-right{
     margin-bottom: 20px;
   }
 
+  /* hero animation */
+  @keyframes football {
+    from{
+      top:100px;
+      left: 0;
+    }
+    to{
+      top:200px;
+      left: 30px;
+    }
+  }
+  @keyframes player {
+    from{
+      bottom: 0;
+      right: 0;
+    }
+    to{
+      bottom: 50px;
+      right: 28px;
+    }
+  }
+
   /* players section */
   #players .players-wrapper{
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* results section */
-  #results::after{
-    display: none;
-  }
-  #results .result-wrapper{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #results .result-wrapper .winner{
-    align-self: flex-end;
-  }
-  #results .result-wrapper .looser{
-    align-self: flex-start;
-  }
-  #results .result-wrapper .score{
-    align-self: center;
-    padding: 50px 0;
-  }
-  #results .result-wrapper .score h2{
-    font-size: 45px;
-    font-weight: 600;
-  }
-  #results .result-wrapper .score .vs{
-    position: static;
-    font-size: 30px;
-    font-weight: 500;
-  }
-  #results .result-wrapper .winner .winner-info,
-  #results .result-wrapper .looser .winner-info{
-    width: 350px;
-  }
-  #results .result-wrapper .winner .winner-info::after,
-  #results .result-wrapper .looser .winner-info::after{
-    width: 140px;
-    background: #111;
-    top: 0;
-    z-index: -1;
-  }
 
   /* Latest News sention */
   #latest-news .news-wrapper{
@@ -549,12 +490,12 @@ footer p.copy-right{
   }
   #latest-news .news-1,
   #latest-news .news-3{
-    flex-direction: column;
+    flex-direction: row;
   }
   #latest-news .news-1 .news-img img,
   #latest-news .news-3 .news-img img{
     border-radius: 0;
-    width: 100%;
+    width: 400px;
   }
 
 }
