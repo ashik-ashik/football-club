@@ -1,5 +1,5 @@
 /* @Import google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 
 
@@ -26,7 +26,7 @@ header, section{
   justify-content: center;
 }
 .container{
-  width: 80%;
+  width: 1050px;
 }
 a{
   text-decoration: none;
@@ -45,12 +45,11 @@ img{
   padding-right: 40px;
 }
 .styled-button .fas{
-  position: relative;
-  left: 5px;
+  transform: translateX(5px);
   transition: all 400ms;
 }
 .styled-button:hover .fas{
-  left: 15px;
+  transform: translateX(20px);
 }
 /* ! common styles */
 
@@ -129,12 +128,10 @@ img{
   left: 0;
   top: 100px;
   height: 120px;
-  animation: football 1.5s linear infinite running alternate;
 }
 #hero .hero-image img:last-child{
   right: 0;
   bottom: 0;
-  animation: player 1.5s linear infinite running alternate;
 }
 @keyframes football {
   from{
@@ -155,6 +152,12 @@ img{
     bottom: 33px;
     right: 28px;
   }
+}
+#hero:hover .hero-image img:first-child{
+  animation: football 1.5s linear infinite running alternate;
+}
+#hero:hover .hero-image img:last-child{
+  animation: player 1.5s linear infinite running alternate;
 }
 
 /* ! hero seciton design */
@@ -196,3 +199,115 @@ img{
   color: var(--text-color);
 }
 /* ! players section design */
+
+
+
+/*  EXTRA SECTION Latest Result sention design */
+#results{
+  padding: 40px 0;
+  position: relative;
+}
+#results::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 42%;
+  width: 100%;
+  background: #eee;
+  z-index: -1;
+}
+.section-title{
+  text-align: center;
+}
+.section-title h2{
+  font-size: 45px;
+  color: #222222;
+  margin-bottom: 15px;
+}
+.section-title h2 span{
+  color: var(--button-bg);
+}
+#results .result-wrapper{
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+#results .result-wrapper .winner,
+#results .result-wrapper .looser{
+  flex-grow: 1;
+  position: relative;
+}
+#results .result-wrapper .winner{
+  text-align: end;
+}
+#results .result-wrapper img{
+  z-index: 2;
+  position: relative;
+}
+#results .result-wrapper .winner .winner-info,
+#results .result-wrapper .looser .winner-info{
+  position: absolute;
+  width: 250px;
+  padding: 25px;
+  background: #111;
+  bottom: 7px;
+  z-index: 0;
+}
+#results .result-wrapper .winner .winner-info{
+  right: 100px;
+  text-align: start;
+}
+#results .result-wrapper .looser .winner-info{
+  left: 100px;
+  text-align: end;
+}
+#results .result-wrapper .winner-info h4{
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#results .result-wrapper .winner-info p{
+  font-size: 17px;
+  color: var(--button-bg);
+  font-weight: 500;
+  margin: 5px 0;
+  letter-spacing: 2px;
+}
+#results .result-wrapper .looser .winner-info p{
+  color: #e60909;
+}
+#results .result-wrapper .winner .winner-info::after,
+#results .result-wrapper .looser .winner-info::after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 140px;
+  background: #111;
+  top: 0;
+  z-index: -1;
+}
+#results .result-wrapper .winner .winner-info::after{
+  left: -46px;
+  transform: skew(-30deg);
+}
+#results .result-wrapper .looser .winner-info::after{
+  right: -46px;
+  transform: skew(30deg);
+}
+#results .result-wrapper .score{
+  color: #111;
+  padding: 0 20px;
+  text-align: center;
+}
+#results .result-wrapper .score h2{
+  font-size: 50px;
+  font-weight: 900;
+}
+#results .result-wrapper .score .vs{
+  position: relative;
+  bottom: 50px;
+  color: #666;
+}
+/*  ! EXTRA SECTION Latest Result sention design */
