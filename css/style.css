@@ -393,13 +393,13 @@ img{
 
 /* footer seciton design */
 footer{
-  padding: 20px 0;
+  padding: 50px 0 30px;
 }
 footer .footer-logo{
   text-align: center;
 }
 footer .footer-logo img{
-  height: 50px;
+  height: 100px;
   width: auto;
 }
 footer .social-icons{
